@@ -17,7 +17,7 @@ import swing.Label;
 
 public class Window
 {
-	public static JFrame frame = new JFrame("Tank Game");
+	public static JFrame frame = new JFrame("Tank Game"); //Create the JFrame
 	
 	public static JPanel pnlMaster = new JPanel(new CardLayout()); //The master JPanel upon which everything is placed
 
@@ -31,20 +31,22 @@ public class Window
 	//Create the JPanels for the game
 	public static JPanel pnlGame = new JPanel();
 
+	//Create the buttons for the main menu
 	public static Button playS = new Button("Play Singleplayer");
 	public static Button playM = new Button("Play Multiplayer");
 	public static Button options = new Button("Options");
 	public static Button language = new Button("Language");
 	public static Button exit = new Button("Quit Game");
 
+	//Create the buttons for the options menu
 	public static swing.Button btnGraphics = new Button("Graphics");
 	public static Button btnSound = new Button("Audio");
 	public static Button btnControls = new Button("Controls");
 	public static Button btnCustomize = new Button("Customization");
 
-	public static Button btnBack = new Button("Back to Main Menu");
+	public static Button btnBack = new Button("Back to Main Menu"); //Back button (leads to main menu whenever clicked)
 
-	public static Label lblVersion = new Label("Version has not loaded properly");
+	public static Label lblVersion = new Label("Version has not loaded properly"); //The version label. Gets automatically updated to the latest version.
 	
 	public static CardLayout cards = (CardLayout)pnlMaster.getLayout(); //Creating the cardlayout
 
@@ -70,6 +72,7 @@ public class Window
 
 	    pnlOptions.setLayout(new BoxLayout(pnlOptions, BoxLayout.Y_AXIS));
 
+	    //The BoxLayout for the main menu's buttons
 	    Box box = Box.createVerticalBox();
 	    box.add(Box.createVerticalStrut(50));
 	    box.add(Window.playS);
@@ -83,6 +86,7 @@ public class Window
 	    box.add(Window.exit);
 	    box.add(Box.createVerticalStrut(50));
 
+	    //Creates empty panels to shift things around
 	    pnlMenu.add(new JPanel());
 	    pnlMenu.add(new JPanel());
 	    pnlMenu.add(box);
@@ -91,10 +95,12 @@ public class Window
 
 	    pnlMenu2.add(Window.lblVersion);
 	    
+	    //A special panel to hold the two panels with visible content (one with buttons and one with the version label) together in a borderlayout
 	    JPanel masterMini1 = new JPanel(new BorderLayout());
 	    masterMini1.add(pnlMenu, BorderLayout.CENTER);
 	    masterMini1.add(pnlMenu2, BorderLayout.SOUTH);
 	    
+	    //Adds the panels to the master panel so they can be switched between with the cardlayout
 	    pnlMaster.add(masterMini1, "Main Menu");
 	    pnlMaster.add(pnlOptions, "Options");
 	    pnlMaster.add(pnlGame, "Game");
@@ -104,7 +110,7 @@ public class Window
 
 	}
 	
-	public static void switchTo(String pnlName)
+	public static void switchTo(String pnlName) //A small method to make changing card easier
 	{
 		Window.cards.show(pnlMaster,pnlName);
 	}
