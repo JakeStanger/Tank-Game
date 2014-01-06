@@ -12,10 +12,10 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SpringLayout;
 
 import swing.Button;
 import swing.Label;
+import swing.Slider;
 
 public class Window
 {
@@ -42,10 +42,16 @@ public class Window
 	public static Button btnExit = new Button("Quit Game");
 
 	//Create the buttons for the options menu
-	public static swing.Button btnGraphics = new Button("Graphics");
+	public static Button btnGraphics = new Button("Graphics");
 	public static Button btnSound = new Button("Audio");
 	public static Button btnControls = new Button("Controls");
 	public static Button btnCustomize = new Button("Customization");
+	
+	//Create the labels for the audio menu
+	public static Label lblMasterSound = new Label("Master sound");
+	
+	//Create the sliders for the audio menu
+	public static Slider sldMasterSound = new Slider();
 
 	public static Button btnBack = new Button("Back to Main Menu"); //Back button (leads to main menu whenever clicked)
 
@@ -75,7 +81,6 @@ public class Window
 
 	    //Some general layout stuff
 	    pnlOptions.setLayout(new BoxLayout(pnlOptions, BoxLayout.Y_AXIS));
-	    pnlAudio.setLayout(new SpringLayout());
 
 	    //The BoxLayout for the main menu's buttons
 	    Box box = Box.createVerticalBox();

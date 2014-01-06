@@ -3,8 +3,8 @@ package options;
 import javax.swing.Box;
 import javax.swing.JPanel;
 
+import listeners.Action;
 import main.Window;
-import menu.Listener;
 import swing.Button;
 
 
@@ -22,7 +22,7 @@ public class Options
 	
 	public Options()
 	{
-		Listener listener = new Listener();
+		Action listener = new Action();
 		
 		pnlOptions.add(Box.createVerticalStrut(50));
 		pnlOptions.add(graphics);

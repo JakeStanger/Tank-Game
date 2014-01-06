@@ -1,4 +1,4 @@
-package menu;
+package listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import options.*;
 import main.Window;
 
-public class Listener implements ActionListener
+public class Action implements ActionListener
 {
 	@Override
 	public void actionPerformed(ActionEvent event) 
@@ -61,7 +61,7 @@ public class Listener implements ActionListener
 		}
 	}
 	
-	public Listener()
+	public Action()
 	{
 		System.out.println("Listener class loaded");
 	}

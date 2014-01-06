@@ -1,12 +1,13 @@
 package menu;
 
+import listeners.Action;
 import main.Window;
 
 public class Menu
 {	
 	public Menu()
 	{
-		Listener listener = new Listener();
+		Action listener = new Action();
 		
 		//Add ActionListeners
 		Window.btnExit.addActionListener(listener);
