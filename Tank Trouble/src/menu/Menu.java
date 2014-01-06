@@ -9,11 +9,11 @@ public class Menu
 		Listener listener = new Listener();
 		
 		//Add ActionListeners
-		Window.exit.addActionListener(listener);
-		Window.playS.addActionListener(listener);
-		Window.playM.addActionListener(listener);
-		Window.options.addActionListener(listener);
-		Window.language.addActionListener(listener);
+		Window.btnExit.addActionListener(listener);
+		Window.btnPlayS.addActionListener(listener);
+		Window.btnPlayM.addActionListener(listener);
+		Window.btnOptions.addActionListener(listener);
+		Window.btnFiller.addActionListener(listener);
 		Window.btnBack.addActionListener(listener);
 		
 		System.out.println("Menu class loaded");

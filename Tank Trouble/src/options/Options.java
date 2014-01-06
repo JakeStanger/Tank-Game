@@ -38,6 +38,7 @@ public class Options
 	    Window.switchTo("Options");
 		
 		graphics.addActionListener(listener);
+		sound.addActionListener(listener);
 		
 		System.out.println("Options class loaded");
 	}
