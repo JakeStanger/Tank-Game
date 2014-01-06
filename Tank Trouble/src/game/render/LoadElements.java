@@ -9,7 +9,7 @@ public class LoadElements extends Canvas
 {
 	public static JPanel pnlGame = new JPanel();
 	public static Canvas canvas = new Canvas();
-	JFrame frame = new main.Window();
+	JFrame frame = main.Window.frame;
 	
 	public LoadElements()
 	{

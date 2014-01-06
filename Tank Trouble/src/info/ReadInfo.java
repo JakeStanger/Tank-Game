@@ -25,7 +25,7 @@ public class ReadInfo
 		}
 		catch( IOException e )
 		{
-			System.out.println( "A read error has occurred." ) ;
+			new Error("reading version file.");
 		}
 		
 		System.out.println("Info reader class loaded");

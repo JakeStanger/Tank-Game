@@ -15,9 +15,9 @@ import javax.swing.JPanel;
 import swing.Button;
 import swing.Label;
 
-@SuppressWarnings("serial")
-public class Window extends JFrame
+public class Window
 {
+	public static JFrame frame = new JFrame("Tank Game");
 	
 	public static JPanel pnlMaster = new JPanel(new CardLayout()); //The master JPanel upon which everything is placed
 
@@ -51,20 +51,19 @@ public class Window extends JFrame
 	public Window()
 	{
 	    //Create the JFrame
-	    super("Tank Trouble");
-	    this.pack();
-	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    this.setVisible(true);
+	    frame.pack();
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
 
 	    //Changes the frame size to your screen size
 	    Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 	    int x = (int) (dimension.getWidth());
 	    int y = (int) (dimension.getHeight());
-	    setSize(x,y);
-	    setResizable(false);
+	    frame.setSize(x,y);
+	    frame.setResizable(false);
 	    //GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().setFullScreenWindow(this); //Makes the application go fullscreen
 
-	    getContentPane().add(pnlMaster);
+	    frame.getContentPane().add(pnlMaster);
 
 	    
 	    switchTo("Main Menu");
