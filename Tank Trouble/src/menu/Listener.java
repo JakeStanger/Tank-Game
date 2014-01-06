@@ -36,7 +36,7 @@ public class Listener implements ActionListener
 		
 		if (event.getSource() == Window.language)
 		{
-			System.out.println("Language clicked");
+			System.out.println("Language clicked. This button shall be removed soon and is a place filler");
 		}
 		
 		
@@ -48,7 +48,7 @@ public class Listener implements ActionListener
 		
 		if (event.getSource() == Window.btnBack)
 		{
-			System.out.println("Returning to main menu");
+			System.out.println("Returning to the main menu");
 			Window.switchTo("Main Menu");
 		}
 	}
