@@ -5,6 +5,7 @@ import java.awt.Container;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
+import events.Change;
 import main.Window;
 import swing.Label;
 import swing.Slider;
@@ -14,6 +15,7 @@ public class Audio
 {
 	JPanel pnlAudio = Window.pnlAudio;
 	Container contentPane = Window.frame.getContentPane();
+	Change changeListener = new Change();
 	
 	Slider sldMasterSound = Window.sldMasterSound;
 	
@@ -28,11 +30,9 @@ public class Audio
 	{
 		pnlAudio.setLayout(layout);
 		
-		pnlAudio.add(lblMasterSound);
-		pnlAudio.add(sldMasterSound);//This is a comment which was changed
-		pnlAudio.add(spnMasterSound);
-		
+		addComponents();
 		positionElements();
+		addListeners();
 		
 		Window.switchTo("Audio");
 		
@@ -49,5 +49,18 @@ public class Audio
 		
 		layout.putConstraint(SpringLayout.WEST, spnMasterSound, 40, SpringLayout.EAST, sldMasterSound);
 		layout.putConstraint(SpringLayout.NORTH, spnMasterSound, 15, SpringLayout.NORTH, contentPane);
+	}
+	
+	public void addComponents()
+	{
+		pnlAudio.add(lblMasterSound);
+		pnlAudio.add(sldMasterSound);
+		pnlAudio.add(spnMasterSound);
+	}
+	
+	public void addListeners()
+	{
+		sldMasterSound.addChangeListener(changeListener);
+		spnMasterSound.addChangeListener(changeListener);
 	}
 }

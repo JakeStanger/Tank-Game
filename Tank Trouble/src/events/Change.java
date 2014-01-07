@@ -7,24 +7,21 @@ import main.Window;
 
 public class Change implements ChangeListener
 {
-	public int sliderValue;
-	public int spinnerValue;
+	public int masterVolume;
 	
 	@Override
 	public void stateChanged(ChangeEvent event) 
 	{
 		if (event.getSource() == Window.sldMasterSound)
 		{
-			System.out.println("Slider update detected");
-			sliderValue = Window.sldMasterSound.getValue();
-			spinnerValue = sliderValue;
+			Window.spnMasterSound.setValue(Window.sldMasterSound.getValue());
+			masterVolume = Window.sldMasterSound.getValue();
 		}
 		
 		if (event.getSource() == Window.spnMasterSound)
 		{
-			System.out.println("Spinner update detected");
-			spinnerValue = (int) Window.spnMasterSound.getValue();
-			sliderValue = spinnerValue;
+			Window.sldMasterSound.setValue((int) Window.spnMasterSound.getValue());
+			masterVolume = Window.sldMasterSound.getValue();
 		}
 	}
 }

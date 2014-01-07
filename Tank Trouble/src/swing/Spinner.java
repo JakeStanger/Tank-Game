@@ -20,7 +20,7 @@ public class Spinner extends JSpinner
 	    prefSize = new Dimension(30, prefSize.height);
 	    field.setPreferredSize(prefSize);
 	    
-	    SpinnerNumberModel model = new SpinnerNumberModel(50, 0.0, 100.0, 5.0);
+	    SpinnerNumberModel model = new SpinnerNumberModel(50, 0, 100, 1);
 	    this.setModel(model);
 	}
 }
