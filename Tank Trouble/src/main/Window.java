@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import swing.Button;
 import swing.Label;
 import swing.Slider;
+import swing.Spinner;
 
 public class Window
 {
@@ -26,6 +27,7 @@ public class Window
 	//Create the JPanels for the main menu
 	public static JPanel pnlMenu = new JPanel(new GridLayout(1,5));
 	public static JPanel pnlMenu2 = new JPanel(new FlowLayout(FlowLayout.LEADING));
+    public static JPanel masterMini1 = new JPanel(new BorderLayout()); //A special panel to hold the two panels with visible content (one with buttons and one with the version label) together in a borderlayout
 
 	//Create the JPanels for the options screen
 	public static JPanel pnlOptions = new JPanel();
@@ -50,6 +52,9 @@ public class Window
 	//Create the labels for the audio menu
 	public static Label lblMasterSound = new Label("Master sound");
 	
+	//Create the text boxes for the audio menu
+	public static Spinner spnMasterSound = new Spinner();
+	
 	//Create the sliders for the audio menu
 	public static Slider sldMasterSound = new Slider();
 
@@ -58,6 +63,7 @@ public class Window
 	public static Label lblVersion = new Label("Version has not loaded properly"); //The version label. Gets automatically updated to the latest version.
 	
 	public static CardLayout cards = (CardLayout)pnlMaster.getLayout(); //Creating the cardlayout
+	public static Box box = Box.createVerticalBox(); //Creates a vertical box for the main menu buttons
 
 	public Window()
 	{
@@ -75,15 +81,39 @@ public class Window
 	    GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().setFullScreenWindow(frame); //Makes the application go fullscreen
 
 	    frame.getContentPane().add(pnlMaster);
-
 	    
 	    switchTo("Main Menu");
 
 	    //Some general layout stuff
 	    pnlOptions.setLayout(new BoxLayout(pnlOptions, BoxLayout.Y_AXIS));
 
-	    //The BoxLayout for the main menu's buttons
-	    Box box = Box.createVerticalBox();
+	    createButtonBoxes();
+
+	    //Creates empty panels to shift things around
+	    pnlMenu.add(new JPanel());
+	    pnlMenu.add(new JPanel());
+	    pnlMenu.add(box);
+	    pnlMenu.add(new JPanel());
+	    pnlMenu.add(new JPanel());
+
+	    pnlMenu2.add(Window.lblVersion);
+	    
+	    masterMini1.add(pnlMenu, BorderLayout.CENTER);
+	    masterMini1.add(pnlMenu2, BorderLayout.SOUTH);
+	    
+	    addPanelsToMaster();
+
+	    System.out.println("Window class loaded");
+
+	}
+	
+	public static void switchTo(String pnlName) //A small method to make changing card easier
+	{
+		Window.cards.show(pnlMaster,pnlName);
+	}
+	
+	public void createButtonBoxes() //The BoxLayout for the main menu's buttons
+	{
 	    box.add(Box.createVerticalStrut(50));
 	    box.add(Window.btnPlayS);
 	    box.add(Box.createVerticalStrut(50));
@@ -95,33 +125,13 @@ public class Window
 	    box.add(Box.createVerticalStrut(50));
 	    box.add(Window.btnExit);
 	    box.add(Box.createVerticalStrut(50));
-
-	    //Creates empty panels to shift things around
-	    pnlMenu.add(new JPanel());
-	    pnlMenu.add(new JPanel());
-	    pnlMenu.add(box);
-	    pnlMenu.add(new JPanel());
-	    pnlMenu.add(new JPanel());
-
-	    pnlMenu2.add(Window.lblVersion);
-	    
-	    //A special panel to hold the two panels with visible content (one with buttons and one with the version label) together in a borderlayout
-	    JPanel masterMini1 = new JPanel(new BorderLayout());
-	    masterMini1.add(pnlMenu, BorderLayout.CENTER);
-	    masterMini1.add(pnlMenu2, BorderLayout.SOUTH);
-	    
-	    //Adds the panels to the master panel so they can be switched between with the cardlayout
-	    pnlMaster.add(masterMini1, "Main Menu");
-	    pnlMaster.add(pnlOptions, "Options");
-	    pnlMaster.add(pnlGame, "Game");
-	    pnlMaster.add(pnlAudio, "Audio");
-
-	    System.out.println("Window class loaded");
-
 	}
 	
-	public static void switchTo(String pnlName) //A small method to make changing card easier
+	public void addPanelsToMaster() //Adds the panels to the master panel so they can be switched between with the cardlayout
 	{
-		Window.cards.show(pnlMaster,pnlName);
+		 pnlMaster.add(masterMini1, "Main Menu");
+		 pnlMaster.add(pnlOptions, "Options");
+		 pnlMaster.add(pnlGame, "Game");
+		 pnlMaster.add(pnlAudio, "Audio");
 	}
 }

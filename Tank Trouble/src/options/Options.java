@@ -3,7 +3,7 @@ package options;
 import javax.swing.Box;
 import javax.swing.JPanel;
 
-import listeners.Action;
+import events.Action;
 import main.Window;
 import swing.Button;
 
