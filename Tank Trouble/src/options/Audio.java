@@ -28,7 +28,7 @@ public class Audio
 	{
 		pnlAudio.setLayout(layout);
 		
-		pnlAudio.add(lblMasterSound); //Helodhghrghhhjtt
+		pnlAudio.add(lblMasterSound);
 		pnlAudio.add(sldMasterSound);
 		pnlAudio.add(spnMasterSound);
 		
