@@ -22,6 +22,5 @@ public class Spinner extends JSpinner
 	    
 	    SpinnerNumberModel model = new SpinnerNumberModel(50, 0.0, 100.0, 5.0);
 	    this.setModel(model);
-	    
 	}
 }

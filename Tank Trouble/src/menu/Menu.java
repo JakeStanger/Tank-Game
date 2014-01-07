@@ -1,6 +1,6 @@
 package menu;
 
-import listeners.Action;
+import events.Action;
 import main.Window;
 
 public class Menu
