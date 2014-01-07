@@ -13,4 +13,4 @@ public class Main
 	}
 }
 
-//William is better than jake
+//William isn't better than jake
