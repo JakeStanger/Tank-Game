@@ -5,6 +5,7 @@ import java.awt.Font;
 
 import javax.swing.JComponent;
 import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
 
 @SuppressWarnings("serial")
 public class Spinner extends JSpinner
@@ -16,7 +17,11 @@ public class Spinner extends JSpinner
 		
 		JComponent field = ((JSpinner.DefaultEditor) this.getEditor());
 	    Dimension prefSize = field.getPreferredSize();
-	    prefSize = new Dimension(50, prefSize.height);
+	    prefSize = new Dimension(30, prefSize.height);
 	    field.setPreferredSize(prefSize);
+	    
+	    SpinnerNumberModel model = new SpinnerNumberModel(50, 0.0, 100.0, 5.0);
+	    this.setModel(model);
+	    
 	}
 }
