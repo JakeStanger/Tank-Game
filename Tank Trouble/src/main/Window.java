@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import swing.Button;
 import swing.Label;
 import swing.Slider;
+import swing.Spinner;
 
 public class Window
 {
@@ -26,7 +27,7 @@ public class Window
 	//Create the JPanels for the main menu
 	public static JPanel pnlMenu = new JPanel(new GridLayout(1,5));
 	public static JPanel pnlMenu2 = new JPanel(new FlowLayout(FlowLayout.LEADING));
-    JPanel masterMini1 = new JPanel(new BorderLayout()); //A special panel to hold the two panels with visible content (one with buttons and one with the version label) together in a borderlayout
+    public static JPanel masterMini1 = new JPanel(new BorderLayout()); //A special panel to hold the two panels with visible content (one with buttons and one with the version label) together in a borderlayout
 
 	//Create the JPanels for the options screen
 	public static JPanel pnlOptions = new JPanel();
@@ -50,6 +51,9 @@ public class Window
 	
 	//Create the labels for the audio menu
 	public static Label lblMasterSound = new Label("Master sound");
+	
+	//Create the text boxes for the audio menu
+	public static Spinner spnMasterSound = new Spinner();
 	
 	//Create the sliders for the audio menu
 	public static Slider sldMasterSound = new Slider();
