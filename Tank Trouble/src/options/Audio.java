@@ -5,11 +5,12 @@ import java.awt.Container;
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
-import events.Change;
 import main.Window;
+import swing.Button;
 import swing.Label;
 import swing.Slider;
 import swing.Spinner;
+import events.Change;
 
 public class Audio 
 {
@@ -25,6 +26,7 @@ public class Audio
 	
 	SpringLayout layout = new SpringLayout();
 	
+	Button btnBack = Window.btnBack;
 	
 	public Audio()
 	{
@@ -49,6 +51,9 @@ public class Audio
 		
 		layout.putConstraint(SpringLayout.WEST, spnMasterSound, 40, SpringLayout.EAST, sldMasterSound);
 		layout.putConstraint(SpringLayout.NORTH, spnMasterSound, 15, SpringLayout.NORTH, contentPane);
+		
+		layout.putConstraint(SpringLayout.WEST, btnBack,5, SpringLayout.WEST, contentPane);
+		layout.putConstraint(SpringLayout.SOUTH, btnBack,0, SpringLayout.SOUTH, contentPane);
 	}
 	
 	public void addComponents()
@@ -56,6 +61,7 @@ public class Audio
 		pnlAudio.add(lblMasterSound);
 		pnlAudio.add(sldMasterSound);
 		pnlAudio.add(spnMasterSound);
+		pnlAudio.add(btnBack);
 	}
 	
 	public void addListeners()
