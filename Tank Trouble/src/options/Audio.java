@@ -29,7 +29,7 @@ public class Audio
 		pnlAudio.setLayout(layout);
 		
 		pnlAudio.add(lblMasterSound);
-		pnlAudio.add(sldMasterSound);
+		pnlAudio.add(sldMasterSound);//This is ghd
 		pnlAudio.add(spnMasterSound);
 		
 		positionElements();
