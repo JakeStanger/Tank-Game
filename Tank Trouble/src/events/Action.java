@@ -4,7 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import main.Window;
-import menu.options.*;
+import menu.Todo;
+import menu.options.Audio;
+import menu.options.Options;
 
 public class Action implements ActionListener
 {
@@ -34,9 +36,10 @@ public class Action implements ActionListener
 			new Options();
 		}
 		
-		if (event.getSource() == Window.btnFiller)
+		if (event.getSource() == Window.btnTodo)
 		{
-			System.out.println("Language clicked. This button shall be removed soon and is a place filler");
+			System.out.println("Todo list clicked");
+			new Todo();
 		}
 		
 		

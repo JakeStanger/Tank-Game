@@ -14,7 +14,7 @@ public class Menu
 		Window.btnPlayS.addActionListener(listener);
 		Window.btnPlayM.addActionListener(listener);
 		Window.btnOptions.addActionListener(listener);
-		Window.btnFiller.addActionListener(listener);
+		Window.btnTodo.addActionListener(listener);
 		Window.btnBack.addActionListener(listener);
 		
 		System.out.println("Menu class loaded");

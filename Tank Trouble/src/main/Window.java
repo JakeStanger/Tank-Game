@@ -12,6 +12,7 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
 
 import swing.Button;
 import swing.Label;
@@ -42,7 +43,7 @@ public class Window
 	public static Button btnPlayS = new Button("Play Singleplayer");
 	public static Button btnPlayM = new Button("Play Multiplayer");
 	public static Button btnOptions = new Button("Options");
-	public static Button btnFiller = new Button("Filler Button");
+	public static Button btnTodo = new Button("Todo List");
 	public static Button btnExit = new Button("Quit Game");
 
 	//Create the buttons for the options menu
@@ -63,6 +64,8 @@ public class Window
 	public static Button btnBack = new Button("Back to Main Menu"); //Back button (leads to main menu whenever clicked)
 
 	public static Label lblVersion = new Label("Version has not loaded properly"); //The version label. Gets automatically updated to the latest version.
+	
+	public static JTextPane txtTodo = new JTextPane();
 	
 	public static CardLayout cards = (CardLayout)pnlMaster.getLayout(); //Creating the cardlayout
 	public static Box box = Box.createVerticalBox(); //Creates a vertical box for the main menu buttons
@@ -123,7 +126,7 @@ public class Window
 	    box.add(Box.createVerticalStrut(50));
 	    box.add(Window.btnOptions);
 	    box.add(Box.createVerticalStrut(50));
-	    box.add(Window.btnFiller);
+	    box.add(Window.btnTodo);
 	    box.add(Box.createVerticalStrut(50));
 	    box.add(Window.btnExit);
 	    box.add(Box.createVerticalStrut(50));
