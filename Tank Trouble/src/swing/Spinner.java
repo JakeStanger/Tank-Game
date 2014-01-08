@@ -14,6 +14,7 @@ public class Spinner extends JSpinner
 	{
 		Font font = new Font("ARMY RUST", Font.BOLD, 32);
 		this.setFont(font);
+		this.setAutoscrolls(true);
 		
 		JComponent field = ((JSpinner.DefaultEditor) this.getEditor());
 	    Dimension prefSize = field.getPreferredSize();
@@ -22,5 +23,6 @@ public class Spinner extends JSpinner
 	    
 	    SpinnerNumberModel model = new SpinnerNumberModel(50, 0, 100, 1);
 	    this.setModel(model);
+	    
 	}
 }
