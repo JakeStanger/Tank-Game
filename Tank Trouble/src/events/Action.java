@@ -22,7 +22,14 @@ public class Action implements ActionListener
 		if (event.getSource() == Window.btnPlayS)
 		{
 			System.out.println("Singleplayer clicked");
-			new game.render.LoadElements();
+			//new game.render.LoadElements();
+			try {
+				new game.GameTick();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			new game.Test();
 		}
 		
 		if (event.getSource() == Window.btnPlayM)
