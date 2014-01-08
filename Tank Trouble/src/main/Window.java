@@ -12,7 +12,7 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextPane;
+import javax.swing.JTextArea;
 
 import swing.Button;
 import swing.Label;
@@ -65,7 +65,7 @@ public class Window
 
 	public static Label lblVersion = new Label("Version has not loaded properly"); //The version label. Gets automatically updated to the latest version.
 	
-	public static JTextPane txtTodo = new JTextPane();
+	public static JTextArea txtTodo = new JTextArea();
 	
 	public static CardLayout cards = (CardLayout)pnlMaster.getLayout(); //Creating the cardlayout
 	public static Box box = Box.createVerticalBox(); //Creates a vertical box for the main menu buttons
