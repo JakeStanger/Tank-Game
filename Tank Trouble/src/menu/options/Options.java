@@ -1,4 +1,4 @@
-package options;
+package menu.options;
 
 import javax.swing.Box;
 import javax.swing.JPanel;

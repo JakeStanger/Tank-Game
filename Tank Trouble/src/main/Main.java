@@ -12,5 +12,3 @@ public class Main
 		System.out.println("Main components loaded");
 	}
 }
-
-//William isn't better than jake

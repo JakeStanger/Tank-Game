@@ -1,4 +1,4 @@
-package options;
+package menu.options;
 
 import java.awt.Container;
 

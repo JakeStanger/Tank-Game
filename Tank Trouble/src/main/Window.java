@@ -35,6 +35,8 @@ public class Window
 
 	//Create the JPanels for the game
 	public static JPanel pnlGame = new JPanel();
+	
+	public static JPanel pnlTodo = new JPanel();
 
 	//Create the buttons for the main menu
 	public static Button btnPlayS = new Button("Play Singleplayer");
@@ -133,5 +135,6 @@ public class Window
 		 pnlMaster.add(pnlOptions, "Options");
 		 pnlMaster.add(pnlGame, "Game");
 		 pnlMaster.add(pnlAudio, "Audio");
+		 pnlMaster.add(pnlTodo, "Todo List");
 	}
 }
