@@ -40,10 +40,10 @@ public class Window //Menu does not fit on screen resolution of 1336*768 or lowe
 	public static JPanel pnlTodo = new JPanel();
 
 	//Create the buttons for the main menu
-	public static Button btnPlayS = new Button("Play Singleplayer");
-	public static Button btnPlayM = new Button("Play Multiplayer");
+	public static Button btnPlayS = new Button("Singleplayer");
+	public static Button btnPlayM = new Button("Multiplayer");
 	public static Button btnOptions = new Button("Options");
-	public static Button btnTodo = new Button("Todo List");
+	public static Button btnTodo = new Button("Empty panel with no way out");
 	public static Button btnExit = new Button("Quit Game");
 
 	//Create the buttons for the options menu
