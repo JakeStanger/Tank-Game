@@ -19,7 +19,7 @@ import swing.Label;
 import swing.Slider;
 import swing.Spinner;
 
-public class Window
+public class Window //Menu does not fit on screen resolution of 1336*768 or lower.
 {
 	public static JFrame frame = new JFrame("Tank Game"); //Create the JFrame
 	
