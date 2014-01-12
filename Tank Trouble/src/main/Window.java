@@ -38,6 +38,8 @@ public class Window //Menu does not fit on screen resolution of 1336*768 or lowe
 	public static JPanel pnlGame = new JPanel();
 	
 	public static JPanel pnlTodo = new JPanel();
+	
+	public static JPanel pnlMultiplayer = new JPanel();
 
 	//Create the buttons for the main menu
 	public static Button btnPlayS = new Button("Singleplayer");
@@ -139,5 +141,6 @@ public class Window //Menu does not fit on screen resolution of 1336*768 or lowe
 		 pnlMaster.add(pnlGame, "Game");
 		 pnlMaster.add(pnlAudio, "Audio");
 		 pnlMaster.add(pnlTodo, "Todo List");
+		 pnlMaster.add(pnlMultiplayer, "Multiplayer");
 	}
 }

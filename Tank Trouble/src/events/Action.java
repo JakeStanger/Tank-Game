@@ -34,6 +34,11 @@ public class Action implements ActionListener
 		
 		if (event.getSource() == Window.btnPlayM)
 		{
+			Window.switchTo("Multiplayer");
+		}
+		
+		if (event.getSource() == Window.btnPlayM)
+		{
 			System.out.println("Multiplayer clicked");
 		}
 		
